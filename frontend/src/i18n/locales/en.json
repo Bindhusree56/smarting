@@ -1,0 +1,70 @@
+{
+  "appName": "SmartSHG",
+  "tagline": "A Digital Platform for Self Help Groups",
+  "nav": {
+    "logout": "Logout",
+    "dashboard": "Dashboard"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "forgotPassword": "Forgot Password?",
+    "name": "Full Name",
+    "mobile": "Mobile Number",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "role": "I am a",
+    "roleHead": "Group Head",
+    "roleMember": "Member",
+    "selectLanguage": "Select Language",
+    "loginButton": "Log In",
+    "registerButton": "Create Account",
+    "noAccount": "Don't have an account?",
+    "haveAccount": "Already have an account?",
+    "resetCode": "Reset Code",
+    "newPassword": "New Password",
+    "sendResetCode": "Send Reset Code",
+    "resetPassword": "Reset Password",
+    "backToLogin": "Back to Login",
+    "passwordsMatch": "Passwords match",
+    "passwordsDoNotMatch": "Passwords do not match"
+  },
+  "group": {
+    "createGroup": "Create SHG",
+    "groupName": "Group Name",
+    "village": "Village",
+    "address": "Address",
+    "description": "Description",
+    "groupCode": "Group Code",
+    "joinGroup": "Join Group",
+    "enterCode": "Enter Group Code",
+    "editGroup": "Edit Group Details",
+    "myGroup": "My Group",
+    "pendingRequests": "Pending Join Requests",
+    "approve": "Approve",
+    "noGroup": "You are not part of a group yet",
+    "memberCount": "Members"
+  },
+  "member": {
+    "members": "Members",
+    "addMember": "Add Member",
+    "editMember": "Edit Member",
+    "removeMember": "Remove",
+    "search": "Search by name or mobile",
+    "aadhaar": "Aadhaar (Optional)",
+    "joinDate": "Join Date",
+    "status": "Status",
+    "active": "Active",
+    "pending": "Pending",
+    "removed": "Removed",
+    "noMembers": "No members found",
+    "save": "Save"
+  },
+  "common": {
+    "cancel": "Cancel",
+    "loading": "Loading...",
+    "submit": "Submit",
+    "back": "Back",
+    "welcome": "Welcome"
+  }
+}
