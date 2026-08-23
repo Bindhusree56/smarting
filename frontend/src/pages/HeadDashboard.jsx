@@ -50,7 +50,9 @@ const HeadDashboard = () => {
           <div className="card action-card">
             <h3>{t('member.members')}</h3>
             <p className="muted">Add, edit, search, or remove members of your SHG.</p>
-            <Link to="/members" className="btn btn-primary">{t('member.members')}</Link>
+           <Link to="/savings" className="btn btn-primary">
+  Savings Management
+</Link>
           </div>
         </div>
       )}

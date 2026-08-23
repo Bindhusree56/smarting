@@ -11,6 +11,7 @@ import CreateGroup from './pages/CreateGroup';
 import JoinGroup from './pages/JoinGroup';
 import GroupDetails from './pages/GroupDetails';
 import MemberManagement from './pages/MemberManagement';
+import Savings from './pages/Savings';
 
 import './styles/app.css';
 
@@ -72,6 +73,16 @@ const AppRoutes = () => {
       />
 
       <Route path="*" element={<Navigate to={user ? '/dashboard' : '/login'} />} />
+      <Route
+  path="/savings"
+  element={
+    <ProtectedRoute roles={['head']}>
+      <Layout>
+        <Savings />
+      </Layout>
+    </ProtectedRoute>
+  }
+/>
     </Routes>
   );
 };

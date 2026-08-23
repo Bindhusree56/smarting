@@ -6,6 +6,7 @@ const connectDB = require('./config/db');
 const authRoutes = require('./routes/authRoutes');
 const groupRoutes = require('./routes/groupRoutes');
 const memberRoutes = require('./routes/memberRoutes');
+const contributionRoutes = require('./routes/contributionRoutes');
 
 const app = express();
 
@@ -21,6 +22,7 @@ app.get('/api/health', (req, res) => {
 app.use('/api/auth', authRoutes);
 app.use('/api/groups', groupRoutes);
 app.use('/api/members', memberRoutes);
+app.use('/api/contributions', contributionRoutes);
 
 // 404 handler
 app.use((req, res) => {
