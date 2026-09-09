@@ -43,6 +43,25 @@ const MemberDashboard = () => {
           <p className="group-code-badge">{t('group.groupCode')}: <strong>{group.code}</strong></p>
           <p>{group.village}</p>
           <Link to="/group" className="btn btn-secondary">{t('group.myGroup')}</Link>
+          <Link to="/my-meetings" className="btn btn-primary">
+  My Meetings
+</Link>
+          <Link to="/my-loans" className="btn btn-primary">
+         My Loans
+        </Link>
+        <Link
+  to="/my-attendance"
+  className="btn btn-secondary"
+>
+  My Attendance
+</Link>
+
+<Link
+  to="/my-fines"
+  className="btn btn-secondary"
+>
+  My Fines
+</Link>
         </div>
       )}
     </div>

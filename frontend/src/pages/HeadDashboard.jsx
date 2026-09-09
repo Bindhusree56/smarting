@@ -48,10 +48,20 @@ const HeadDashboard = () => {
             <Link to="/group" className="btn btn-secondary">{t('group.myGroup')}</Link>
           </div>
           <div className="card action-card">
-            <h3>{t('member.members')}</h3>
-            <p className="muted">Add, edit, search, or remove members of your SHG.</p>
-            <Link to="/members" className="btn btn-primary">{t('member.members')}</Link>
-          </div>
+  <h3>{t('member.members')}</h3>
+
+  <p className="muted">
+    Add, edit, search, or remove members of your SHG.
+  </p>
+
+  <Link to="/savings" className="btn btn-primary">
+    Savings Management
+  </Link>
+
+  <Link to="/meetings" className="btn btn-secondary">
+    Meeting Management
+  </Link>
+</div>
         </div>
       )}
     </div>

@@ -6,21 +6,29 @@ const connectDB = require('./config/db');
 const authRoutes = require('./routes/authRoutes');
 const groupRoutes = require('./routes/groupRoutes');
 const memberRoutes = require('./routes/memberRoutes');
-
+const contributionRoutes = require('./routes/contributionRoutes');
+const loanRoutes = require('./routes/loanRoutes');
+const meetingRoutes = require('./routes/meetingRoutes');
+const attendanceRoutes = require('./routes/attendanceRoutes');
+const fineRoutes = require('./routes/fineRoutes');
 const app = express();
 
 connectDB();
 
 app.use(cors({ origin: process.env.CLIENT_URL || '*' }));
 app.use(express.json());
-
+app.use('/api/fines', fineRoutes);
 app.get('/api/health', (req, res) => {
   res.status(200).json({ status: 'ok', message: 'SmartSHG API is running' });
 });
 
+app.use('/api/loans', loanRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/groups', groupRoutes);
 app.use('/api/members', memberRoutes);
+app.use('/api/contributions', contributionRoutes);
+app.use('/api/attendance', attendanceRoutes);
+app.use('/api/meetings', meetingRoutes);
 
 // 404 handler
 app.use((req, res) => {

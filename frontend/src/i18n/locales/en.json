@@ -45,6 +45,28 @@
     "noGroup": "You are not part of a group yet",
     "memberCount": "Members"
   },
+  "savings": {
+  "title": "Savings Management",
+  "totalSavings": "Total Group Savings",
+  "addContribution": "Add Monthly Contribution",
+  "contributionHistory": "Contribution History",
+  "member": "Member",
+  "selectMember": "Select Member",
+  "amount": "Amount",
+  "month": "Month",
+  "year": "Year",
+  "paymentDate": "Payment Date",
+  "status": "Status",
+  "paid": "Paid",
+  "pending": "Pending",
+  "notes": "Notes",
+  "optional": "Optional",
+  "add": "Add Contribution",
+  "saving": "Saving...",
+  "noContributions": "No contributions recorded yet.",
+  "success": "Savings contribution added successfully!"
+},
+  
   "member": {
     "members": "Members",
     "addMember": "Add Member",
@@ -60,6 +82,7 @@
     "noMembers": "No members found",
     "save": "Save"
   },
+  
   "common": {
     "cancel": "Cancel",
     "loading": "Loading...",
