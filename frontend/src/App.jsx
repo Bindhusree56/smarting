@@ -12,9 +12,13 @@ import JoinGroup from './pages/JoinGroup';
 import GroupDetails from './pages/GroupDetails';
 import MemberManagement from './pages/MemberManagement';
 import Savings from './pages/Savings';
-
+import MyLoans from './pages/MyLoans';
+import Meetings from './pages/Meetings';
 import './styles/app.css';
-
+import MemberMeetings from './pages/MemberMeetings';
+import Attendance from './pages/Attendance';
+import MyFines from './pages/MyFines';
+import MyAttendance from "./pages/MyAttendance";
 const Layout = ({ children }) => (
   <>
     <Navbar />
@@ -48,6 +52,48 @@ const AppRoutes = () => {
         }
       />
       <Route
+  path="/my-meetings"
+  element={
+    <ProtectedRoute roles={['member']}>
+      <Layout>
+        <MemberMeetings />
+      </Layout>
+    </ProtectedRoute>
+  }
+/>
+
+<Route
+  path="/my-attendance"
+  element={
+    <ProtectedRoute roles={['member']}>
+      <Layout>
+        <MyAttendance />
+      </Layout>
+    </ProtectedRoute>
+  }
+/>
+
+<Route
+  path="/my-fines"
+  element={
+    <ProtectedRoute roles={['member']}>
+      <Layout>
+        <MyFines />
+      </Layout>
+    </ProtectedRoute>
+  }
+/>
+      <Route
+  path="/meetings/:meetingId/attendance"
+  element={
+    <ProtectedRoute roles={['head']}>
+      <Layout>
+        <Attendance />
+      </Layout>
+    </ProtectedRoute>
+  }
+/>
+      <Route
         path="/join-group"
         element={
           <ProtectedRoute roles={['member']}>
@@ -55,6 +101,16 @@ const AppRoutes = () => {
           </ProtectedRoute>
         }
       />
+      <Route
+  path="/my-meetings"
+  element={
+    <ProtectedRoute roles={['member']}>
+      <Layout>
+        <MemberMeetings />
+      </Layout>
+    </ProtectedRoute>
+  }
+/>
       <Route
         path="/group"
         element={
@@ -71,7 +127,16 @@ const AppRoutes = () => {
           </ProtectedRoute>
         }
       />
-
+ <Route
+  path="/meetings"
+  element={
+    <ProtectedRoute roles={['head']}>
+      <Layout>
+        <Meetings />
+      </Layout>
+    </ProtectedRoute>
+  }
+/>
       <Route path="*" element={<Navigate to={user ? '/dashboard' : '/login'} />} />
       <Route
   path="/savings"
@@ -79,6 +144,16 @@ const AppRoutes = () => {
     <ProtectedRoute roles={['head']}>
       <Layout>
         <Savings />
+      </Layout>
+    </ProtectedRoute>
+  }
+/>
+<Route
+  path="/my-loans"
+  element={
+    <ProtectedRoute roles={['member']}>
+      <Layout>
+        <MyLoans />
       </Layout>
     </ProtectedRoute>
   }
